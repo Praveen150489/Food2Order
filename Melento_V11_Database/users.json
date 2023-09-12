@@ -1,0 +1,122 @@
+[
+  {
+    "_id": 17,
+    "first_name": "Anshu",
+    "middle_name": "Kumar",
+    "last_name": "Jha",
+    "email": "kumar_anshu456@gmail.com",
+    "password": "58bbc3b9952f5fcf0e36b3434c90ca32",
+    "dob": "12th Feb 2001",
+    "mobile": "9876543210",
+    "address": {
+      "id": 1,
+      "house_No": "25",
+      "street": "8th Cross",
+      "area": "Indira Nagar",
+      "city": "Blr",
+      "country": "India",
+      "pincode": "444444"
+    },
+    "role": "admin"
+  },
+  {
+    "_id": 18,
+    "first_name": "Prashant",
+    "middle_name": "Kumar",
+    "last_name": "Jha",
+    "email": "prashant.singh123@gmail.com",
+    "password": "62fb83a646186b9dc1bf103beac50ed7",
+    "dob": "14th April 2001",
+    "mobile": "7050847592",
+    "address": {
+      "id": 2,
+      "house_No": "25",
+      "street": "8th Cross",
+      "area": "Indira Nagar",
+      "city": "Blr",
+      "country": "India",
+      "pincode": "444444"
+    },
+    "role": "user"
+  },
+  {
+    "_id": 19,
+    "first_name": "Praveen",
+    "middle_name": "Prakash",
+    "last_name": "Choudhary",
+    "email": "prakashpraveen929@gmail.com",
+    "password": "58bbc3b9952f5fcf0e36b3434c90ca32",
+    "dob": "14th April 2000",
+    "mobile": "7050847592",
+    "address": {
+      "id": 3,
+      "house_No": "25",
+      "street": "8th Cross",
+      "area": "Indira Nagar",
+      "city": "Blr",
+      "country": "India",
+      "pincode": "443322"
+    },
+    "role": "admin"
+  },
+  {
+    "_id": 20,
+    "first_name": "Praveen",
+    "middle_name": "zzz",
+    "last_name": "Prakash",
+    "email": "prakashpraveen456@gmail.com",
+    "password": "62fb83a646186b9dc1bf103beac50ed7",
+    "dob": "15th April 2000",
+    "mobile": "+917050847592",
+    "address": {
+      "id": 4,
+      "house_No": "527",
+      "street": "fuygj",
+      "area": "jyj",
+      "city": "Jhanjharpur",
+      "country": "India",
+      "pincode": "847404"
+    },
+    "role": "user"
+  },
+  {
+    "_id": 21,
+    "first_name": "Ashish",
+    "middle_name": "Kumar",
+    "last_name": "Reddy",
+    "email": "ashish.kumar@gmail.com",
+    "password": "098c4c7d688d835e34b3c254f4060baa",
+    "dob": "16th May 2000",
+    "mobile": "7281987774",
+    "address": {
+      "id": 5,
+      "house_No": "107",
+      "street": "5th Cross",
+      "area": "Kodihali",
+      "city": "Blr",
+      "country": "India",
+      "pincode": "560001"
+    },
+    "role": "owner"
+  },
+  {
+    "_id": 22,
+    "first_name": "Abhimanyu",
+    "middle_name": "Sen",
+    "last_name": "Datta",
+    "email": "abhimanyu.sen@gmail.com",
+    "password": "62fb83a646186b9dc1bf103beac50ed7",
+    "dob": "15th April 2000",
+    "mobile": "7281987774",
+    "address": {
+      "id": 6,
+      "house_No": "107",
+      "street": "5th Cross",
+      "area": "Kodihali",
+      "city": "Blr",
+      "country": "India",
+      "pincode": "560001"
+    },
+    "role": "user"
+  }
+]

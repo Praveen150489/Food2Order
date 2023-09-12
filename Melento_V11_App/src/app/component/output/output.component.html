@@ -1,0 +1,93 @@
+<p>output works!</p>
+
+<div [style.background-color]="'yellow'">
+    Uses fixed yellow background
+</div>
+
+<div [ngStyle]="{'color':'white', 'background-color':'blue'}">
+    Uses fixed white text on blue background
+</div>
+
+<div>
+    <span [ngStyle]="{color:'red'}" [style.font-size.px]="fontSize">
+        red text
+    </span>
+</div> 
+
+<h4 class="ui horizontal divider header">
+    ngStyle with an object
+</h4>
+<div [ngStyle]="style"></div>
+
+<div [style.background-color]="color" style="color: white;">
+    {{color}} background
+</div>
+
+<h4 class="ui horizontal divider header">
+    Play with the color and font-size here
+</h4>
+
+<div class="ui input">
+    <input type="text" name="color" value="{{color}}" #colorinput>
+</div>
+<div class="ui input">
+    <input type="text" name="fontSize" value="{{fontSize}}" #fontinput>
+</div>
+
+<button class="ui primary button" (click)="apply(colorinput.value, fontinput.value)">Apply Setting</button>
+
+<div class="ngClassDemo">
+    <div [ngClass]="{bordered:false}">This is never bordered</div>
+    <div [ngClass]="{bordered:true}">This is always bordered</div>
+
+    <div [ngClass]="{bordered: isBordered}">
+        Using object literal. Border {{isBordered ? "ON" : "OFF"}}
+    </div>
+    <div [ngClass]="classesObj">
+        Using object var. Border {{classesObj.bordered ? "ON" : "OFF"}}
+    </div>
+    <button (click)="toggleBorder()">Toggle</button>
+
+
+    <div class="selectors">
+        <div>
+            <input type="checkbox" [checked]="classList.indexOf('blue') > -1" (click)="toggleClass('blue')">
+            <span>Blue</span>
+        </div>
+        <div>
+            <input type="checkbox" [checked]="classList.indexOf('round') > -1" (click)="toggleClass('round')">
+            <span>Round</span>
+        </div>
+    </div>
+
+    <div class="blue" [ngClass]="['blue','round']">
+        This will always have a blue background and round corners
+    </div>
+    <div class="base" [ngClass]="classList">
+        This is {{classList.indexOf('blue') > -1 ? "" : "NOT"}} blue
+        and {{classList.indexOf('round') > -1 ? "" : "NOT"}} round
+    </div>
+</div>
+
+
+
+<h4 class="ui horizontal divider header">
+    Current choice is {{choice}}
+</h4>
+
+<div class="ui raised segment">
+    <ul [ngSwitch]="choice">
+        <li *ngSwitchCase="1">First Choice</li>
+        <li *ngSwitchCase="2">Second Choice</li>
+        <li *ngSwitchCase="3">Third Choice</li>
+        <li *ngSwitchCase="4">Fourth Choice</li>
+        <li *ngSwitchCase="2">Second Choice, again</li>
+        <li *ngSwitchCase>Default Choice</li>
+    </ul>
+</div>
+
+<div>
+    <button class="ui primary button" (click)="nextChoice()">
+        Next Choice
+    </button>
+</div>

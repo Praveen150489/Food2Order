@@ -1,0 +1,43 @@
+<!-- <p>restaurant-view works!</p> --> 
+
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Restaurant_Name</th>
+        <th>Image</th>
+        <th>Address</th>
+        <th>Dishes</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of restaurants">
+            <td>{{u.id}}</td>
+            <td>{{u.r_Name}}</td>
+            <td><img src={{u.r_Img_Path}} height="200px" width="200px"/></td>
+            <td>
+                <div *ngFor="let address of u.r_Addresses">
+                House No : {{address.house_No}}<br/>
+                {{address.street}},{{address.area}}<br/>
+                {{address.city}},{{address.country}}<br/>
+                {{address.pincode}}<br/>
+                </div>
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="viewMenu(u.id)">View Dish</button>
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="deleteRestaurant(u.id)">Delete</button>
+            </td>
+            
+            <!-- <td>
+                <div *ngFor="let dish of u.r_Dishes">
+                {{dish.d_Name}}<br/>
+                {{dish.d_Cost}}<br/>
+                {{dish.d_Description}}<br/>
+                {{dish.d_Category}}<br/>
+                {{dish.d_Composition}}<br/>
+                {{dish.d_Type}}<br/>
+                </div>
+            </td> -->
+        </tr>
+    </tbody>
+</table>

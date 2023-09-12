@@ -1,0 +1,273 @@
+[
+  {
+    "_id": 1,
+    "r_Name": "KFC",
+    "r_Img_Path": "assets/images/restaurant1.png",
+    "r_Addresses": [
+      {
+        "id": 1,
+        "house_No": "23",
+        "street": "8th Cross",
+        "area": "Mvm",
+        "city": "Blr",
+        "country": "India",
+        "pincode": "333333"
+      },
+      {
+        "id": 2,
+        "house_No": "25",
+        "street": "8th Cross",
+        "area": "Indira Nagar",
+        "city": "Blr",
+        "country": "India",
+        "pincode": "444444"
+      }
+    ],
+    "r_Dishes": [
+      {
+        "id": 1,
+        "d_Name": "Masala Dosa",
+        "d_Cost": 100,
+        "d_Description": "Make of Bread and veg",
+        "d_Category": "Breakfast",
+        "d_Composition": "Bread and Veg",
+        "d_Type": "Veg",
+        "available": "yes"
+      },
+      {
+        "id": 2,
+        "d_Name": "Idli",
+        "d_Cost": 50,
+        "d_Description": "Make of rice power and veg",
+        "d_Category": "Breakfast",
+        "d_Composition": "Bread and Veg",
+        "d_Type": "Veg",
+        "available": "no"
+      }
+    ],
+    "r_Owner_Id": 2
+  },
+  {
+    "_id": 2,
+    "r_Name": "McDonals",
+    "r_Img_Path": "assets/images/restaurant2.png",
+    "r_Addresses": [
+      {
+        "id": 1,
+        "house_No": "23",
+        "street": "8th Cross",
+        "area": "Mvm",
+        "city": "Blr",
+        "country": "India",
+        "pincode": "333333"
+      }
+    ],
+    "r_Dishes": [
+      {
+        "id": 1,
+        "d_Name": "Masala Dosa",
+        "d_Cost": 100,
+        "d_Description": "Make of Bread and veg",
+        "d_Category": "Breakfast",
+        "d_Composition": "Bread and Veg",
+        "d_Type": "Veg",
+        "available": "no"
+      },
+      {
+        "id": 2,
+        "d_Name": "Chicken Burger",
+        "d_Cost": 50,
+        "d_Description": "Make of rice power and veg",
+        "d_Category": "Breakfast",
+        "d_Composition": "Bread and Veg",
+        "d_Type": "Veg",
+        "available": "yes"
+      }
+    ],
+    "r_Owner_Id": 21
+  },
+  {
+    "_id": 3,
+    "r_Name": "Starbucks",
+    "r_Img_Path": "assets/images/restaurant3.png",
+    "r_Addresses": [
+      {
+        "id": 1,
+        "house_No": "999",
+        "street": "7th Main Road",
+        "area": "Mvm",
+        "city": "Bangalore",
+        "country": "India",
+        "pincode": "560019"
+      }
+    ],
+    "r_Dishes": [
+      {
+        "id": 1,
+        "d_Name": "Cold Coffee",
+        "d_Cost": 200,
+        "d_Description": "cold liquid with coffee milk",
+        "d_Category": "anytime",
+        "d_Composition": "ice, milk and suger and coffee",
+        "d_Type": "veg",
+        "available": "yes"
+      }
+    ],
+    "r_Owner_Id": 2
+  },
+  {
+    "_id": 4,
+    "r_Name": "Tom Hortons",
+    "r_Img_Path": "assets/images/restaurant4.png",
+    "r_Addresses": [
+      {
+        "id": 1,
+        "house_No": "166",
+        "street": "4th Cross",
+        "area": "Kodihalli",
+        "city": "Blr",
+        "country": "India",
+        "pincode": "560011"
+      },
+      {
+        "id": 2,
+        "house_No": "167",
+        "street": "5th Cross",
+        "area": "Indira Nagar",
+        "city": "Blr",
+        "country": "India",
+        "pincode": "560012"
+      },
+      {
+        "id": 3,
+        "house_No": "168",
+        "street": "6th Cross",
+        "area": "Indira Nagar",
+        "city": "Blr",
+        "country": "India",
+        "pincode": "560012"
+      }
+    ],
+    "r_Dishes": [
+      {
+        "id": 1,
+        "d_Name": "Veg Burgar",
+        "d_Cost": 80,
+        "d_Description": "bread and veg combo",
+        "d_Category": "snacks",
+        "d_Composition": "bread toust and fried vegitable",
+        "d_Type": "veg",
+        "available": "yes"
+      },
+      {
+        "id": 2,
+        "d_Name": "Egg Roll",
+        "d_Cost": 60,
+        "d_Description": "Fried roll",
+        "d_Category": "breakfast/snacks",
+        "d_Composition": "bread and egg and vegitable",
+        "d_Type": "non-veg",
+        "available": "no"
+      }
+    ],
+    "r_Owner_Id": 21
+  },
+  {
+    "_id": 5,
+    "r_Name": "Teco Bell",
+    "r_Img_Path": "assets/images/restaurant5.png",
+    "r_Addresses": [
+      {
+        "id": 1,
+        "house_No": "127",
+        "street": "Spice Garden",
+        "area": "Marathalli",
+        "city": "Bangalore",
+        "country": "India",
+        "pincode": "560017"
+      }
+    ],
+    "r_Dishes": [
+      {
+        "id": 1,
+        "d_Name": "Fried Chicken Wings",
+        "d_Cost": 299,
+        "d_Description": "tasty fried chiecken wings with chilli speice",
+        "d_Category": "Lunch/Dinner",
+        "d_Composition": "Chinken wings , besen and chilli power",
+        "d_Type": "non-veg",
+        "available": "yes"
+      },
+      {
+        "id": 2,
+        "d_Name": "Burger",
+        "d_Cost": 150,
+        "d_Description": "combination of veg and bread with lot of tasty speices",
+        "d_Category": "Snacks",
+        "d_Composition": "Soft bread, green veg and souce and chicken",
+        "d_Type": "veg/non-veg",
+        "available": "no"
+      },
+      {
+        "id": 3,
+        "d_Name": "Cold Coffee",
+        "d_Cost": 250,
+        "d_Description": "cold ice with coffee milk mixture",
+        "d_Category": "anytime",
+        "d_Composition": "coffee, milk and cold ice with dry fruits",
+        "d_Type": "veg",
+        "available": "yes"
+      }
+    ],
+    "r_Owner_Id": 21
+  },
+  {
+    "_id": 6,
+    "r_Name": "gfg",
+    "r_Img_Path": "leetcode",
+    "r_Addresses": [
+      {
+        "id": 1,
+        "house_No": "256",
+        "street": "8th main road",
+        "area": "Nodia",
+        "city": "Delhi",
+        "country": "India",
+        "pincode": "630012"
+      }
+    ],
+    "r_Dishes": [
+      {
+        "id": 1,
+        "d_Name": "hackerRank",
+        "d_Cost": 230,
+        "d_Description": "rdghj",
+        "d_Category": "gfhjk",
+        "d_Composition": "fghj",
+        "d_Type": "tfghbj",
+        "available": "yes"
+      },
+      {
+        "id": 2,
+        "d_Name": "HackerEarth",
+        "d_Cost": 240,
+        "d_Description": "ytju",
+        "d_Category": "jfgyeru",
+        "d_Composition": "trhfj",
+        "d_Type": "thjtjyf",
+        "available": "yes"
+      },
+      {
+        "id": 3,
+        "d_Name": "CodeCheif",
+        "d_Cost": 250,
+        "d_Description": "dfgjydfugfdv",
+        "d_Category": "jdgug",
+        "d_Composition": "gfjj",
+        "d_Type": "fdjgyfdgujhfx",
+        "available": "no"
+      }
+    ],
+    "r_Owner_Id": 21
+  }
+]

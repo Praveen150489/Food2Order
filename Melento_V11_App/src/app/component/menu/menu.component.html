@@ -1,0 +1,41 @@
+<!-- <p>menu works!</p> -->  
+
+<div class="row">
+    <table class="table table-dark table-hover">
+      <thead style="background-color: black;">
+        <th>Dish Name</th>
+        <th>Dish Cost</th>
+        <th>Dish Description</th>
+        <th>Dish Category</th>
+        <th>Dish Composition</th>
+        <th>Dish Type</th>
+        <th *ngIf="str_role == 'user'">Add</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let d of dishes">
+            <!-- when the dish is not available, then below code will be execute. -->
+              <td *ngIf="d.available==='no'" [appGreyDish]="shouldGreyOut">{{d.d_Name}}</td>
+              <td *ngIf="d.available==='no'" [appGreyDish]="shouldGreyOut">{{d.d_Cost}}</td>
+              <td *ngIf="d.available==='no'" [appGreyDish]="shouldGreyOut">{{d.d_Description}}</td>
+              <td *ngIf="d.available==='no'" [appGreyDish]="shouldGreyOut">{{d.d_Category}}</td>
+              <td *ngIf="d.available==='no'" [appGreyDish]="shouldGreyOut">{{d.d_Composition}}</td>
+              <td *ngIf="d.available==='no'" [appGreyDish]="shouldGreyOut">{{d.d_Type}}</td>
+              <td *ngIf="d.available==='no' && str_role == 'user'" [appGreyDish]="shouldGreyOut">
+                <button class="btn btn-primary" (click)="AddDish(rest_id,d.id)">Add to Cart</button>
+              </td>
+            
+            <!-- when the dish is available, then below will be execute -->
+              <td *ngIf="d.available==='yes'">{{d.d_Name}}</td>
+              <td *ngIf="d.available==='yes'">{{d.d_Cost}}</td>
+              <td *ngIf="d.available==='yes'">{{d.d_Description}}</td>
+              <td *ngIf="d.available==='yes'">{{d.d_Category}}</td>
+              <td *ngIf="d.available==='yes'">{{d.d_Composition}}</td>
+              <td *ngIf="d.available==='yes'">{{d.d_Type}}</td>
+              <td *ngIf="d.available==='yes' && str_role == 'user'">
+                <button class="btn btn-primary" (click)="AddDish(rest_id,d.id)">Add to Cart</button>
+              </td>
+              
+          </tr>
+      </tbody>
+    </table>
+</div>

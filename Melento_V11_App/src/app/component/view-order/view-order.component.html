@@ -1,0 +1,41 @@
+<!-- <p>view-order works!</p>  -->
+
+<!-- <div class="modal-body">
+    <div class="row">
+        <div *ngFor="let ord of orders">
+        <p>Order Id : {{ord.id}}</p>
+        <p>Restaurant Id : {{ord.restaurant_id}}</p>
+        <p>Order Date : {{ord.order_date}}</p>
+        <p>Dishes Ids : {{ord.dishes_ids}}</p>
+        <p>Number of Items of each dish : {{ord.num_of_dishes}}</p>
+        <p>User Id : {{ord.user_id}}</p>
+        <p>Total Items : {{ord.total_order}} </p>
+        </div>
+    </div>
+</div> -->
+
+
+    <table>
+      <thead>
+        <th>Order Id</th>
+        <th>Restaurant Id</th>
+        <th>Order Date</th>
+        <th>Dishes Ids</th>
+        <th>Number of Dishes</th>
+        <th>User Id</th>
+        <th>Total Orders</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let ord of orders">
+              <td>{{ord.id}}</td>
+              <td>{{ord.restaurant_id}}</td>
+              <td>{{ord.order_date}}</td>
+              <td>{{ord.dishes_ids}}</td>
+              <td>{{ord.num_of_dishes}}</td>
+              <td>{{ord.user_id}}</td>
+              <td>{{ord.total_order}}</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <!-- <button (click)="excelExport()">Excel Export</button> -->

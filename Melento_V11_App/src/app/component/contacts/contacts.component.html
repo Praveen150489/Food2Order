@@ -1,0 +1,37 @@
+<!-- <p>contacts works!</p>  -->
+
+<div class="row" id="contact">
+    <h2>Contact Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5446159977228!2d77.566184174301!3d13.000952387317101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17063d088663%3A0xdff39d6f78824598!2sSignDesk!5e0!3m2!1sen!2sin!4v1689663926370!5m2!1sen!2sin" style="border:0;" width="1200" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h3>Enquiry</h3>
+    <form class="row g-3" #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Name</label>
+          <!-- <input type="text" class="form-control" id="name"> -->
+          <input type="text" class="form-control" id="name" placeholder="full name" [(ngModel)]="name" name="name">
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <!-- <input type="email" class="form-control" id="email"> -->
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="emailAddress" name="emailAddress">
+        </div>
+        <div class="col-md-6">
+          <label for="mobile" class="form-label">Contact Number</label>
+          <!-- <input type="mobile" class="form-control" id="mobile"> -->
+          <input type="mobile" class="form-control" id="mobile" placeholder="mobile" [(ngModel)]="mobile" name="mobile">
+        </div>
+        <div class="col-md-6">
+          <label for="whatsapp" class="form-label">WhatsApp</label>
+          <!-- <input type="mobile" class="form-control" id="whatsapp"> -->
+          <input type="mobile" class="form-control" id="whatsapp" placeholder="whatsapp number" [(ngModel)]="whatsapp" name="whatsapp">
+        </div>
+        <div class="col-md-12">
+            <label for="query" class="form-label">Query</label>
+            <!-- <input type="text" class="form-control" id="query"> -->
+            <input type="text" class="form-control" id="query" placeholder="Text query" [(ngModel)]="query" name="query">
+        </div>
+        <div class="col-12"> 
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

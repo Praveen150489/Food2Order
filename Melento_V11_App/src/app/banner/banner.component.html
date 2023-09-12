@@ -1,0 +1,190 @@
+<!-- <p>banner works!</p> -->
+<div class="row">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color: antiquewhite;">
+      <img src="assets/images/food_logo.jpg" height="100px" width="100px"/>
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="'/'">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="'/contacts'">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="'/aboutus'">About Us</a>
+          </li>
+          <li class="nav-item" *ngIf="role ==='admin'">
+            <a class="nav-link active" [routerLink]="'/admin'">Admin</a>
+          </li>
+          <li class="nav-item" *ngIf="role === 'user'">
+            <a class="nav-link active" [routerLink]="'/restaurants'">Restaurants</a>
+          </li>
+          <li class="nav-item" *ngIf="role === 'owner'">
+            <a class="nav-link active" [routerLink]="'/ownerRestaurants'">Restaurants</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" [routerLink]="'/course'">Course</a>
+          </li> -->
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" [routerLink]="'/output'">Output</a>
+          </li> --> 
+
+          <li class="nav-item" *ngIf="!user_id">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn-button">
+              Login
+            </button>
+            <div class="modal fade" id="signIn-button" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #C2B9B0;">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sign-In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <app-demo-form></app-demo-form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="!user_id">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register-button">
+              Register
+            </button>
+            <div class="modal fade" id="register-button" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #C2B9B0;">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sign-Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <!-- <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="first-name" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="first-name" placeholder="first name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="middle-name" class="form-label">Middle Name</label>
+                      <input type="text" class="form-control" id="middle-name" placeholder="middle name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="last-name" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="last-name" placeholder="last name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="abc123@gmail.com">
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirm-password" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirm-password" placeholder="confirm-password">
+                    </div>
+                    <div class="mb-3">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" placeholder="Address">
+                    </div>
+                    <div class="mb-3">
+                      <label for="address-details" class="form-label">Address 2</label>
+                      <input type="text" class="form-control" id="address-details" placeholder="Apartment,studio or floor">
+                    </div>
+                    <div class="mb-3">
+                      <label for="city" class="form-label">City</label>
+                      <input type="text" class="form-control" id="city" placeholder="city">
+                    </div>
+                    <div class="mb-3">
+                      <label for="state" class="form-label">State</label>
+                      <input type="text" class="form-control" id="state" placeholder="state">
+                    </div>
+                    <div class="mb-3">
+                      <label for="country" class="form-label">Country</label>
+                      <input type="text" class="form-control" id="country" placeholder="country">
+                    </div>
+                    <div class="mb-3">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="zip" placeholder="pin code">
+                    </div>
+                    <div class="mb-3">
+                      <label for="mobile" class="form-label">Mobile</label>
+                      <input type="mobile" class="form-control" id="mobile" placeholder="mobile">
+                    </div>
+                    <div class="mb-3">
+                      <label for="dob" class="form-label">DOB</label>
+                      <input type="date" class="form-control" id="DOB" >
+                    </div>
+                  </div> -->
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="checking()" >Register</button>
+                  </div> -->
+                  <app-register-form></app-register-form>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="role ==='user'">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cart-button">
+              Cart
+            </button>
+            <div class="modal" id="cart-button" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #C2B9B0;">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Carts</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <app-card></app-card>
+                  <!-- <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                  </div> -->
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="checkout()">Checkout</button>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item" *ngIf="user_id">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signOut-button" (click)="clear()">
+              Logout
+            </button>
+          </li>
+          <!-- <button type="button" class="btn btn-primary">
+            Notifications <span class="badge text-bg-secondary">4</span>
+          </button> -->
+
+          <!-- <li class="nav-item" *ngIf="!user_id">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#jwt-Login-button">
+              Jwt Login
+            </button>
+            <div class="modal fade" id="jwt-Login-button" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" style="background-color: #C2B9B0;">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Jwt-Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <app-demo2-form></app-demo2-form>
+                </div>
+              </div>
+            </div>
+          </li> -->
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+</div>

@@ -1,0 +1,58 @@
+<!-- <p>demo2-form works!</p> -->
+
+<!-- <div class="ui raised segment">
+    <h2 class="ui header">Demo Form: Sku with Builder</h2>
+    <form [formGroup]="myForm"
+          (ngSubmit)="onSubmit(myForm.value)"
+          class="ui form">
+  
+      <div class="field">
+        <label for="skuInput">SKU</label>
+        <input type="text"
+             id="skuInput"
+             placeholder="SKU"
+             formControlName="sku"> 
+      </div>
+
+      <button type="submit" class="ui button">Submit</button>
+    </form>
+</div> -->
+
+<!-- <div class="ui raised segment">
+    <h2 class="ui header">Demo Form: With validation (shorthand)</h2>
+    <form [formGroup]="myForm"
+          (ngSubmit)="onSubmit(myForm.value)"
+          class="ui form"
+          [class.error]="!myForm.valid && myForm.touched">
+  
+      <div class="field" [class.error]="!myForm.get('sku')?.valid && myForm.get('sku')?.touched">
+        <label for="skuInput">SKU</label>
+        <input type="text"
+             id="skuInput"
+             placeholder="SKU"
+             formControlName="sku">
+             <div *ngIf="!myForm.controls['sku'].valid" style="color: red;" class="form-error">SKU is invalid</div> 
+             <div *ngIf="myForm.controls['sku'].hasError('required')" class="invalid-feedback">SKU is required</div>
+      </div>
+
+      <div *ngIf="!myForm.valid" style="color: red;" class="form-error">Form is invalid</div>
+      <button type="submit" class="ui button">Submit</button>
+    </form>
+</div>
+ -->
+
+
+<form #myForm="ngForm">
+  <div class="modal-body">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" #email>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="pwd" placeholder="password" #password>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="registerUser_Jwt(email.value,password.value)">Register</button>
+      <button type="submit" class="btn btn-primary" (click)="loginUser_Jwt(email.value,password.value)">Login</button>
+  </div>
+</form>

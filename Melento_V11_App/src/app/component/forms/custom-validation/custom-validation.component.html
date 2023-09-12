@@ -1,0 +1,17 @@
+<!-- <p>custom-validation works!</p> -->
+
+
+<div class="ui raised segment">
+    <h2 class="ui header">Demo Form: With custom validation </h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form" [class.error]="!myForm.valid && myForm.touched">
+        <div class="field" [class.error]="!myForm.get('sku')?.valid && myForm.get('sku')?.touched">
+            <label for="skuInput">SKU</label>
+            <input type="text" id="skuInput" placeholder="SKU" formControlName="sku">
+            <div *ngIf="!myForm.controls['sku'].valid" style="color: red;" class="form-error">SKU is invalid</div> 
+            <div *ngIf="myForm.controls['sku'].hasError('required')" class="invalid-feedback">SKU is required</div>
+            <div *ngIf="sku.hasError('invalidsku')" style="color: red;" class="form_error">SKU must begin with <span>123</span></div>
+        </div>
+        <div *ngIf="!myForm.valid" style="color: red;" class="form-error">Form is invalid</div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>

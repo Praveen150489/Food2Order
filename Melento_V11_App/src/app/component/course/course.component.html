@@ -1,0 +1,13 @@
+<!-- <p>course works!</p> -->
+
+<div *ngFor="let course of arrCourses">
+    {{course.title}}
+</div>
+
+<form>
+    <div class="form-group">
+        <label for="courseTitle">Title</label>
+        <input type="text" id="courseTitle" #title>
+    </div>
+    <button class="btn btn-primary" (click)="addCourse(title.value)">Add Course</button>
+</form>

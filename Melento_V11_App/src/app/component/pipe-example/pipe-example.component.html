@@ -1,0 +1,18 @@
+<!-- <p>pipe-example works!</p> -->
+
+    <h2>Power Boost calculator</h2>
+    <label for="power-input">Normal power: </label>
+    <input id="power-input" type="text" [(ngModel)]="power">
+    <label for="power-input">Boost factor: </label>
+    <input id="power-input" type="text" [(ngModel)]="factor">
+    <p>
+      Super Hero Power: {{power | exponentialStrength:factor}}
+    </p>
+
+
+    <h2>Pin Latin Tranform</h2>
+    <label for="power-input">Enter string: </label>
+    <input id="power-input" type="text" [(ngModel)]="str">
+    <h1>
+        Pin Latin word : {{str | pinLatin}}
+    </h1>

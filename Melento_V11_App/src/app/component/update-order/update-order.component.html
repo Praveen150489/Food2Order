@@ -1,0 +1,67 @@
+<!-- <p>update-order works!</p> -->
+
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" [class.error]="!myForm.valid && myForm.touched">
+        <div class="modal-body">
+        <div class="form-group">
+            <label class="form-label" for="id"> Select a order for Update:</label>
+            <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event)">
+                <option selected>Select an id</option>
+                <option *ngFor="let u of ordersArr " [ngValue]="u.id">{{u.id}}</option>
+            </select>
+        </div>
+        <div class="col-md-12" class="field" [class.error]="!myForm.get('id')?.valid && myForm.get('id')?.touched">
+          <label for="order-id">Order Id</label>
+          <input type="number" class="form-control" id="id" placeholder="order id" formControlName="id">
+          <div *ngIf="!myForm.controls['id'].valid" style="color: red;" class="form-error">Order id is invalid</div> 
+          <div *ngIf="myForm.controls['id'].hasError('required')" class="invalid-feedback">Order id is required</div>
+      </div>
+      <div class="field" [class.error]="!myForm.get('restId')?.valid && myForm.get('restId')?.touched">
+          <label for="rest-id">Restaurant Id</label>
+          <input type="number" class="form-control" id="restId" placeholder="restaurant id" formControlName="restId">
+          <div *ngIf="!myForm.controls['restId'].valid" style="color: red;" class="form-error">Restaurant Id is invalid</div> 
+          <div *ngIf="myForm.controls['restId'].hasError('required')" class="invalid-feedback">Restaurant Id is required</div>
+      </div>
+      <div class="field" [class.error]="!myForm.get('orderDate')?.valid && myForm.get('orderDate')?.touched">
+          <label for="orderDate">Order date</label>
+          <input type="text" class="form-control" id="orderDate" placeholder="order date" formControlName="orderDate">
+          <div *ngIf="!myForm.controls['orderDate'].valid" style="color: red;" class="form-error">Order Date is invalid</div> 
+          <div *ngIf="myForm.controls['orderDate'].hasError('required')" class="invalid-feedback">Order Date is required</div>
+      </div>
+      <div class="field" [class.error]="!myForm.get('dishesIds')?.valid && myForm.get('dishesIds')?.touched">
+          <label for="dishesIds">Dishes Ids</label>
+          <input type="text" class="form-control" id="dishesIds" placeholder="dishes ids" formControlName="dishesIds">
+          <div *ngIf="!myForm.controls['dishesIds'].valid" style="color: red;" class="form-error">Dishes Ids is invalid</div> 
+          <div *ngIf="myForm.controls['dishesIds'].hasError('required')" class="invalid-feedback">Dishes Ids is required</div>
+      </div>
+      <div class="field" [class.error]="!myForm.get('numDishes')?.valid && myForm.get('numDishes')?.touched">
+          <label for="numDishes">Number of Dishes</label>
+          <input type="text" class="form-control" id="numDishes" placeholder="number of dishes" formControlName="numDishes">
+          <div *ngIf="!myForm.controls['numDishes'].valid" style="color: red;" class="form-error">Num of Dishes is invalid</div> 
+          <div *ngIf="myForm.controls['numDishes'].hasError('required')" class="invalid-feedback">Num of Dishes is required</div>
+      </div>
+      <!-- <div class="field" [class.error]="!myForm.get('confirm_password')?.valid && myForm.get('confirm_password')?.touched">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="text" id="confirm_password" placeholder="confirm password" formControlName="confirm_password">
+          <div *ngIf="!myForm.controls['confirm_password'].valid" style="color: red;" class="form-error">Confirm Password is invalid</div> 
+          <div *ngIf="myForm.controls['confirm_password'].hasError('required')" class="invalid-feedback">Confirm Password is required</div>
+      </div> -->
+      <div class="field" [class.error]="!myForm.get('userId')?.valid && myForm.get('userId')?.touched">
+          <label for="userId">User Id</label>
+          <input type="number" class="form-control" id="userId" placeholder="user id" formControlName="userId">
+          <div *ngIf="!myForm.controls['userId'].valid" style="color: red;" class="form-error">User Id is invalid</div> 
+          <div *ngIf="myForm.controls['userId'].hasError('required')" class="invalid-feedback">User Id is required</div>
+      </div>
+      <div class="field" [class.error]="!myForm.get('totalOrder')?.valid && myForm.get('totalOrder')?.touched">
+          <label for="totalOrder">totalOrder</label>
+          <input type="number" class="form-control" id="totalOrder" placeholder="total order" formControlName="totalOrder">
+          <div *ngIf="!myForm.controls['totalOrder'].valid" style="color: red;" class="form-error">Total Order is invalid</div> 
+          <div *ngIf="myForm.controls['totalOrder'].hasError('required')" class="invalid-feedback">Total Order is required</div>
+      </div>
+      
+      <div *ngIf="!myForm.valid" style="color: red;" class="form-error">Form is invalid</div>
+      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </form>
+

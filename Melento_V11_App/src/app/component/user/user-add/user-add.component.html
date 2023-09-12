@@ -1,0 +1,236 @@
+<!-- <p>user-add works!</p> -->
+
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" [class.error]="!myForm.valid && myForm.touched">
+    <div class="modal-body">
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('firstName')?.valid && myForm.get('firstName')?.touched">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="first name" formControlName="firstName">
+        <div *ngIf="!myForm.controls['firstName'].valid" style="color: red;" class="form-error">First Name is invalid</div> 
+        <div *ngIf="myForm.controls['firstName'].hasError('required')" class="invalid-feedback">First Name is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('middleName')?.valid && myForm.get('middleName')?.touched">
+        <label for="middleName" class="form-label">Middle Name</label>
+        <input type="text" class="form-control" id="middleName" placeholder="middle name" formControlName="middleName">
+        <div *ngIf="!myForm.controls['middleName'].valid" style="color: red;" class="form-error">Middle Name is invalid</div> 
+        <div *ngIf="myForm.controls['middleName'].hasError('required')" class="invalid-feedback">Middle Name is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('lastName')?.valid && myForm.get('lastName')?.touched">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="last name" formControlName="lastName">
+          <div *ngIf="!myForm.controls['lastName'].valid" style="color: red;" class="form-error">Last Name is invalid</div> 
+          <div *ngIf="myForm.controls['lastName'].hasError('required')" class="invalid-feedback">Last Name is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('email')?.valid && myForm.get('email')?.touched">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" placeholder="name@gmail.com" formControlName="email">
+          <div *ngIf="!myForm.controls['email'].valid" style="color: red;" class="form-error">Email is invalid</div> 
+          <div *ngIf="myForm.controls['email'].hasError('required')" class="invalid-feedback">Email is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('pwd')?.valid && myForm.get('pwd')?.touched">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="pwd" placeholder="password" formControlName="pwd">
+          <div *ngIf="!myForm.controls['pwd'].valid" style="color: red;" class="form-error">Password is invalid</div> 
+          <div *ngIf="myForm.controls['pwd'].hasError('required')" class="invalid-feedback">Password is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('confirm_password')?.valid && myForm.get('confirm_password')?.touched">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" class="form-control" id="confirm_password" placeholder="confirm password" formControlName="confirm_password">
+          <div *ngIf="!myForm.controls['confirm_password'].valid" style="color: red;" class="form-error">Confirm Password is invalid</div> 
+          <div *ngIf="myForm.controls['confirm_password'].hasError('required')" class="invalid-feedback">Confirm Password is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('house_No')?.valid && myForm.get('house_No')?.touched">
+          <label for="house_No">House No.</label>
+          <input type="text" class="form-control" id="house_No" placeholder="house no." formControlName="house_No">
+          <div *ngIf="!myForm.controls['house_No'].valid" style="color: red;" class="form-error">House No. is invalid</div> 
+          <div *ngIf="myForm.controls['house_No'].hasError('required')" class="invalid-feedback">House No. is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('street')?.valid && myForm.get('street')?.touched">
+          <label for="street">Street</label>
+          <input type="text" class="form-control" id="street" placeholder="street" formControlName="street">
+          <div *ngIf="!myForm.controls['street'].valid" style="color: red;" class="form-error">Street is invalid</div> 
+          <div *ngIf="myForm.controls['street'].hasError('required')" class="invalid-feedback">Street is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('area')?.valid && myForm.get('area')?.touched">
+          <label for="area">Area</label>
+          <input type="text" class="form-control" id="area" placeholder="area" formControlName="area">
+          <div *ngIf="!myForm.controls['area'].valid" style="color: red;" class="form-error">Area is invalid</div> 
+          <div *ngIf="myForm.controls['area'].hasError('required')" class="invalid-feedback">Area is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('city')?.valid && myForm.get('city')?.touched">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" placeholder="city" formControlName="city">
+          <div *ngIf="!myForm.controls['city'].valid" style="color: red;" class="form-error">City is invalid</div> 
+          <div *ngIf="myForm.controls['city'].hasError('required')" class="invalid-feedback">City is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('state')?.valid && myForm.get('state')?.touched">
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state" placeholder="state" formControlName="state">
+          <div *ngIf="!myForm.controls['state'].valid" style="color: red;" class="form-error">State is invalid</div> 
+          <div *ngIf="myForm.controls['state'].hasError('required')" class="invalid-feedback">State is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('country')?.valid && myForm.get('country')?.touched">
+          <label for="state">Country</label>
+          <input type="text" class="form-control" id="country" placeholder="country" formControlName="country">
+          <div *ngIf="!myForm.controls['country'].valid" style="color: red;" class="form-error">Country is invalid</div> 
+          <div *ngIf="myForm.controls['country'].hasError('required')" class="invalid-feedback">Country is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('zip')?.valid && myForm.get('zip')?.touched">
+          <label for="zip">Zip</label>
+          <input type="text" id="zip" class="form-control" placeholder="zip" formControlName="zip">
+          <div *ngIf="!myForm.controls['zip'].valid" style="color: red;" class="form-error">Zip is invalid</div> 
+          <div *ngIf="myForm.controls['zip'].hasError('required')" class="invalid-feedback">Zip is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('mobile')?.valid && myForm.get('mobile')?.touched">
+          <label for="mobile">Mobile</label>
+          <input type="text" class="form-control" id="mobile" placeholder="mobile" formControlName="mobile">
+          <div *ngIf="!myForm.controls['mobile'].valid" style="color: red;" class="form-error">Mobile is invalid</div> 
+          <div *ngIf="myForm.controls['mobile'].hasError('required')" class="invalid-feedback">Mobile is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('dob')?.valid && myForm.get('dob')?.touched">
+          <label for="dob">DOB</label>
+          <input type="text" class="form-control" id="dob" placeholder="dob" formControlName="dob">
+          <div *ngIf="!myForm.controls['dob'].valid" style="color: red;" class="form-error">DOB is invalid</div> 
+          <div *ngIf="myForm.controls['dob'].hasError('required')" class="invalid-feedback">DOB is required</div>
+      </div>
+      <div class="col-md-12" class="field" [class.error]="!myForm.get('role')?.valid && myForm.get('role')?.touched">
+        <label for="role">Role</label>
+        <input type="text" class="form-control" id="role" placeholder="role" formControlName="role">
+        <div *ngIf="!myForm.controls['role'].valid" style="color: red;" class="form-error">DOB is invalid</div> 
+        <div *ngIf="myForm.controls['role'].hasError('required')" class="invalid-feedback">DOB is required</div>
+      </div>
+  
+      <div *ngIf="!myForm.valid" style="color: red;" class="form-error">Form is invalid</div>
+      <div *ngIf="myForm.hasError('passwordMismatch')" style="color: red;">Password do not match</div>
+      <button type="submit" class="btn btn-primary">Add User</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+</form>
+  
+
+
+
+
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-stepper [linear]="isLinear" #stepper style="background-color: #c2cad0;">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" (ngSubmit)="saveFirstStepData(firstFormGroup)">
+        <ng-template matStepLabel>Fill out User Details</ng-template>
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="first name" formControlName="first_name" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Middle Name</mat-label>
+            <input matInput placeholder="middle name" formControlName="middle_name" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="last name" formControlName="last_name" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email" formControlName="email" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="password" formControlName="password" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>DOB</mat-label>
+            <input matInput placeholder="date of birth" formControlName="dob" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Mobile</mat-label>
+            <input matInput placeholder="mobile" formControlName="mobile" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Role</mat-label>
+            <input matInput placeholder="User/Admin" formControlName="role" required>
+        </mat-form-field>
+        <div>
+            <button mat-raised-button matStepperNext type="submit">Save</button>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Fill out Address Details">
+        <form [formGroup]="secondFormGroup" (ngSubmit)="saveSecondStepData(secondFormGroup)">
+            <mat-form-field class="col-4">
+                <input matInput formControlName="house_No" placeholder="House number">
+            </mat-form-field>
+            <mat-form-field class="col-4">
+                <input matInput formControlName="street" placeholder="Street"> 
+            </mat-form-field>
+            <mat-form-field class="col-4">
+                <input matInput formControlName="area" placeholder="Area">
+            </mat-form-field>
+            <mat-form-field class="col-4">
+                <input matInput formControlName="city" placeholder="City">
+            </mat-form-field>
+            <mat-form-field class="col-4">
+                <input matInput formControlName="country" placeholder="Country">
+            </mat-form-field>
+            <mat-form-field class="col-4">
+                <input matInput formControlName="pincode" placeholder="Pincode">
+            </mat-form-field>
+            <div>
+                <button mat-raised-button matStepperNext type="submit" class="my-2">Save</button>
+            </div>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-stepper> -->
+
+
+
+
+
+<!-- <table>
+    <thead>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>DOB</th>
+        <th>Mobile</th>
+        <th>Address Details</th>
+        <th>Role</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of addedUsers">
+            <td>{{u.id}}</td>
+            <td>{{u.first_name}}</td>
+            <td>{{u.middle_name}}</td>
+            <td>{{u.last_name}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.password}}</td>
+            <td>{{u.dob}}</td>
+            <td>{{u.mobile}}</td>
+            <td>
+                House No : {{u.address.house_No}}<br/>
+                {{u.address.street}},{{u.address.area}}<br/>
+                {{u.address.city}},{{u.address.country}}<br/>
+                {{u.address.pincode}}
+            </td>
+            <td>{{u.role}}</td>
+        </tr>
+    </tbody>
+</table> -->

@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+nav{
+    background-color: antiquewhite;
+}
+
+footer{
+    background-color: antiquewhite;
+}
+
+#home_page_background_img{
+    position: relative;
+    background: url("assets/images/background-photo.jpg") no-repeat top center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-page{
+    background-color: #c2cad0;
+}
+
+#contact{
+    background-color: #c2cad0;
+}
+
+#about-us{
+    background-color: #c2cad0;
+}
+
+#about_page_background_img{
+    position: relative;
+    background: url("assets/images/background-photo.jpg") no-repeat top center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#admin_page{
+    background-color: #c2cad0;
+}

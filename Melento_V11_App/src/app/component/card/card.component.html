@@ -1,0 +1,56 @@
+<!-- <p>card works!</p> -->
+
+
+<!-- <div class="modal-body">
+    <div class="row">
+        <p>Cart Id : {{card.id}}</p>
+        <p>User Id : {{card.user_id}}</p>
+        <div class="row">
+            <table class="table table-dark table-hover">
+              <thead style="background-color: black;">
+                <th>Rest_Id</th>
+                <th>Dish Ids</th>
+                <th>Num of items corresponding dish ids</th>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of card.items">
+                      <td>{{item.rest_id}}</td>
+                      <td>{{item.dish_ids}}</td>
+                      <td>{{item.number_of_each_dish}}</td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>
+        <p>Total Items : {{card.total}}</p>
+    </div>
+</div> -->
+
+
+<div class="modal-body">
+    <div class="row">
+        <div class="body">
+            <div class="Cart Container">
+                <table class="table table striped columns">
+                    <thead>
+                        <th>Dish Id</th>
+                        <th>Dish Name</th>
+                        <th>Price</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let dish of arrDishes;let i=index">
+                            <td>{{dish.id}}</td>
+                            <td>{{dish.d_Name}}</td>
+                            <button class="button-minus border rounded-circle" (click)="decrement(dish.id)">-</button>
+                            {{cart.number_of_each_dish[i]}}
+                            <button class="button-plus border rounded-circle" (click)="increment(dish.id)">+</button>
+                            <td>Rs {{dish.d_Cost*cart.number_of_each_dish[i]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>TOTAL: {{total_amt}}</div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="checkout()">Checkout</button>
+    <button class="btn btn-primary" (click)="clearcart()">Clear Cart</button>
+</div>
