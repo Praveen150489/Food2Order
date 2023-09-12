@@ -1,0 +1,11 @@
+
+// reached folder ==> Melento_V11_App
+// open this folder in cmd, then enter below command line in cmd:-
+ng serve
+
+
+// reached folder ==> Melento_V11_Server
+// open this folder in new cmd, then enter below command line in cmd:-
+nodemon server.js
+
+// then server will going to connect with database (mongoDB) by using of express.js
